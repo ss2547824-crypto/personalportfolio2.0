@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait in Dots</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="hero">
+    <div class="background-word" aria-hidden="true">
+      DEVELOPER
+    </div>
+
+    <canvas id="canvas" aria-label="Interactive particle portrait"></canvas>
+
+    <div id="welcome">
+      <h1>Your portrait.<br>Made of light.</h1>
+      <p>Choose your portrait to begin.</p>
+    </div>
+
+    <div class="controls">
+      <label class="button upload">
+        Choose photo
+        <input id="photoInput" type="file" accept="image/*">
+      </label>
+
+      <button id="revealButton" class="button" disabled>
+        Reveal →
+      </button>
+    </div>
+
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
