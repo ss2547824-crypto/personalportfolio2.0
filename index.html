@@ -3,35 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portrait in Dots</title>
+  <meta name="theme-color" content="#080709">
+
+  <title>Shivam — Portrait in Dots</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <main class="hero">
     <div class="background-word" aria-hidden="true">
       DEVELOPER
     </div>
 
-    <canvas id="canvas" aria-label="Interactive particle portrait"></canvas>
+    <div class="portrait-shadow" aria-hidden="true"></div>
 
-    <div id="welcome">
-      <h1>Your portrait.<br>Made of light.</h1>
-      <p>Choose your portrait to begin.</p>
-    </div>
+    <canvas
+      id="canvas"
+      aria-label="Interactive particle portrait of Shivam Kumar"
+    ></canvas>
 
     <div class="controls">
-      <label class="button upload">
-        Choose photo
-        <input id="photoInput" type="file" accept="image/*">
-      </label>
-
-      <button id="revealButton" class="button" disabled>
-        Reveal →
+      <button
+        id="revealButton"
+        type="button"
+        disabled
+        aria-pressed="false"
+      >
+        <span id="buttonText">Reveal</span>
+        <span aria-hidden="true">↗</span>
       </button>
     </div>
 
-    <p id="status" role="status"></p>
+    <div id="loader" role="status">
+      <div class="loading-ring"></div>
+      <span>Loading portrait</span>
+    </div>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <noscript>
+      Please enable JavaScript to view this portrait.
+    </noscript>
   </main>
 </body>
 </html>
